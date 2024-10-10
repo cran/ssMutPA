@@ -233,7 +233,7 @@ dotplot<-function(data,low_col="#6ADD26",high_col="#AB2513",cut_point=5){
 #' data(samp_class_onco,mut_onco,sur_onco)
 #' ##draw a waterfall plot
 #' #win.graph()
-#' Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")
+#' \donttest{Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")}
 Oncoplot<-function(maf,samp_class,sur,mut_status,pathway,pathway_name,isTCGA=FALSE,top=20,clinicalFeatures = c("sample_group","event"),
                    class_col=c("#00468B","#ED0000"),event_col=c("#B3DE69","#BC80BD"),sortByAnnotation = TRUE,gene_mar=7,
                    removeNonMutated= FALSE,drawRowBar= TRUE,drawColBar= TRUE,leftBarData= NULL,leftBarLims= NULL,

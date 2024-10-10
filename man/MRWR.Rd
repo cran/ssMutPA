@@ -45,7 +45,5 @@ data(mut_status)
 mut_gene<-intersect(names(mut_status[,1])[which(mut_status[,1]!=0)],igraph::V(ppi_network)$name)
 seed<-intersect(names(mut_status[,1])[which(mut_status[,1]!=0)],igraph::V(ppi_network)$name)
 #perform the function `MRWR`.
-\donttest{
-RWR_res<-MRWR(net_AdjMatrNorm,Seeds=seed,net_data=ppi_network,mut_gene,BC_Num = 12436)
-}
+\donttest{RWR_res<-MRWR(net_AdjMatrNorm,Seeds=seed,net_data=ppi_network,mut_gene,BC_Num = 12436)}
 }

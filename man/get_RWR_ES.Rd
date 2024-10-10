@@ -51,7 +51,5 @@ load(pathway_path)
 samp_name<-c("TCGA-06-0881-01A","TCGA-76-4934-01A")
 examp_data<-mut_status[,samp_name]
 #perform the function `get_RWR_ES`.
-\donttest{
-Path_ES<-get_RWR_ES(examp_data,net_data=ppi_network,pathway_data=kegg_323_gmt,BC_Num=12436)
-}
+\donttest{Path_ES<-get_RWR_ES(examp_data,net_data=ppi_network,pathway_data=kegg_323_gmt,BC_Num=12436)}
 }

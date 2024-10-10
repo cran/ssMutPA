@@ -14,7 +14,7 @@ mountain_plot(data, sample_class, Path_name)
 \item{Path_name}{The names of the pathways that you want to show in the graph.The 'Path_name' must be included in the row names of the data.}
 }
 \value{
-No return value
+Density ridges plot
 }
 \description{
 The function `mountain_plot` is used to draw a graph to reflect the distribution of the data.

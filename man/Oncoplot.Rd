@@ -90,7 +90,7 @@ Oncoplot(
 \item{titleText}{Custom title. Default 'NULL'.}
 }
 \value{
-No return value
+A waterfall plot
 }
 \description{
 Load the data in MAF format and draw a waterfall plot.
@@ -104,5 +104,5 @@ load(pathway_path)
 data(samp_class_onco,mut_onco,sur_onco)
 ##draw a waterfall plot
 #win.graph()
-Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")
+\donttest{Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")}
 }

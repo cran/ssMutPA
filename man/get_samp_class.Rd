@@ -38,7 +38,5 @@ surv_path <- system.file("extdata","sur.Rdata",package = "ssMutPA")
 load(surv_path)
 data(Path_ES)
 #perform function `get_samp_class`.
-\donttest{
-res<-get_samp_class(Path_ES,sur,seed_num=5,cox_pval=0.05,min.nc = 2,max.nc =5)
-}
+\donttest{res<-get_samp_class(Path_ES,sur,seed_num=5,cox_pval=0.05,min.nc = 2,max.nc =5)}
 }

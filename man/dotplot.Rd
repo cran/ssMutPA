@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot.R
 \name{dotplot}
 \alias{dotplot}
-\title{Plotting the Dot plot .}
+\title{Plotting the Dot plot.}
 \usage{
 dotplot(data, low_col = "#6ADD26", high_col = "#AB2513", cut_point = 5)
 }
@@ -14,7 +14,7 @@ dotplot(data, low_col = "#6ADD26", high_col = "#AB2513", cut_point = 5)
 \item{cut_point}{The threshold of HRs,when HR is greater than the cut_point,HR is assigned cut_point.}
 }
 \value{
-No return value
+A Dot plot
 }
 \description{
 The function is used to draw a graph to reflect the univariate HRs and P-values of the pathways in different cancer types.

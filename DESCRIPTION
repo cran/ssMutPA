@@ -1,7 +1,7 @@
 Package: ssMutPA
 Type: Package
 Title: Single-Sample Mutation-Based Pathway Analysis
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person(given = "Junwei", family = "Han", email = "hanjunwei1981@163.com", role  = c("aut", "cre", "cph")),
              person(given = "Yalan", family = "He", role  = "aut"),
              person(given = "Qian", family = "Wang", role  = "aut"))
@@ -14,13 +14,13 @@ Imports: ggplot2, ggridges, grDevices, igraph, kernlab, maftools,
         Matrix, NbClust, parallel, pheatmap, RColorBrewer, stats,
         survival, utils
 Suggests: knitr, qpdf, rmarkdown
-Depends: R (>= 3.5.0)
+Depends: R (>= 4.0.0)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2024-04-16 01:41:36 UTC; DELL
+Packaged: 2024-10-06 06:47:30 UTC; DELL
 Author: Junwei Han [aut, cre, cph],
   Yalan He [aut],
   Qian Wang [aut]
 Maintainer: Junwei Han <hanjunwei1981@163.com>
 Repository: CRAN
-Date/Publication: 2024-04-16 14:50:02 UTC
+Date/Publication: 2024-10-10 15:00:02 UTC

@@ -166,5 +166,5 @@ pathway_path <- system.file("extdata","kegg_323_gmt.Rdata",package = "ssMutPA")
 load(pathway_path)
 data(samp_class_onco,mut_onco,sur_onco)
 #draw a waterfall plot
-Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")
+# \donttest{Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")}
 ```

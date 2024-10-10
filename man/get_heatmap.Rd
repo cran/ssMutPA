@@ -45,7 +45,7 @@ get_heatmap(
 \item{annotation_names_col}{Boolean value showing if the names for column annotation tracks should be drawn.}
 }
 \value{
-No return value
+A heatmap
 }
 \description{
 The function `get_heatmap` is used to plot a heatmap with subtype labels.
