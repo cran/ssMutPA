@@ -1,9 +1,9 @@
-cc72eceab142460f4145c79153a4a019 *DESCRIPTION
+5fdc0aa3535ad98e7df9d55a26049978 *DESCRIPTION
 fd252a8cbe989f882f0f8f221ed55133 *NAMESPACE
 78b803b8fcd6ec95ed29b20764686300 *R/data.R
 c2f6506cdac618459f1cfaccb5865adf *R/data_progress.R
 fed9ed859b6f7ccc86c03988d4ee0cfd *R/main.R
-3907b60584eec5b1364c838a14869a86 *R/plot.R
+77b0dc07c02c704febdc5d91e432045f *R/plot.R
 5ff3b8b84aace7b3a5412d5c2b1ef394 *R/specc_cluster.R
 0b6c26a9385a220e9196f4f4e7219e67 *build/vignette.rds
 c831805c92bf28b72a721e3fcbf6e27c *data/Path_ES.rda
@@ -17,9 +17,9 @@ a17f9440f8c48534d7c64ea000048f2a *data/mut_onco.rda
 0e77350f52eb16d4a6b597d766e894ed *data/samp_class_onco.rda
 a8aea704d76dba87aa735a7b6dc5d507 *data/sample_class.rda
 f673c6d8b91484bfe9b80fe36634b28c *data/sur_onco.rda
-91d05c7e5631e1171d15d070cbaa7391 *inst/doc/ssMutPA.R
-cdaf5bf1b76e4fbd881115bdb2c4084e *inst/doc/ssMutPA.Rmd
-47b042f4a27d9a7424b7ecfdc9ef517d *inst/doc/ssMutPA.html
+e70cea5e2ffd2a5a8384a75645279eae *inst/doc/ssMutPA.R
+9ecfd8314deb0a6ed258a2cd4c1477d5 *inst/doc/ssMutPA.Rmd
+fe7b277885a88baa6cfee751087382ce *inst/doc/ssMutPA.html
 9193422d923a823350d84343d676cfde *inst/extdata/kegg_323_gmt.Rdata
 634e948dce5141cdeb4b8bbac7523fe0 *inst/extdata/maffile.txt
 5b7957625c156df97e764d5808eda8e6 *inst/extdata/mutation_data.Rdata
@@ -27,7 +27,7 @@ cdaf5bf1b76e4fbd881115bdb2c4084e *inst/doc/ssMutPA.Rmd
 b4dc0d7c6bc4b298b1efbccd7717562a *inst/extdata/sur.Rdata
 59e37fbb57b10670db2113d6120ad6f3 *man/FastSEAscore.Rd
 1eff2897355c362c354134c6d57a0c68 *man/MRWR.Rd
-f47a7d28005d4b2a7f216bcb997f99d1 *man/Oncoplot.Rd
+0a7b6da6afc999006836e33c01bfe538 *man/Oncoplot.Rd
 494041783e12acc2cff08d4315b6aa97 *man/Path_ES.Rd
 34d1079fd3ccf5f5acbd176abcc3afcd *man/Path_Name.Rd
 64a7208da7c1a3c23867cc54171d9170 *man/RWR_res.Rd
@@ -35,6 +35,7 @@ f47a7d28005d4b2a7f216bcb997f99d1 *man/Oncoplot.Rd
 18a8fe914c477b4ec52b31a0e32fe3dd *man/cox_data.Rd
 de317786117d1d20b93d789f115479df *man/dot_data.Rd
 035d024fb348baf41692c917327ae3f4 *man/dotplot.Rd
+081464d1bf482c9cf7d3f3c79593c75c *man/figure/introduce.jpg
 a36bbe7381b747983b830b5f0e043d6e *man/get_RWR_ES.Rd
 ed66234d8bd7f48fc3382fd9e8014f96 *man/get_heatmap.Rd
 a47127f3fe5fcf6261125e763654adb5 *man/get_indicate.Rd
@@ -48,4 +49,4 @@ cd049dd9deb6181adcd7539da73eebb7 *man/mut_status.Rd
 8f7762329bce9a4b136b24146e247f1f *man/samp_class_onco.Rd
 b11ffe1a4f25e3f00f1ccf5022141918 *man/sample_class.Rd
 f869c1975dbea508e56d37d967ea8f7e *man/sur_onco.Rd
-cdaf5bf1b76e4fbd881115bdb2c4084e *vignettes/ssMutPA.Rmd
+9ecfd8314deb0a6ed258a2cd4c1477d5 *vignettes/ssMutPA.Rmd

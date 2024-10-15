@@ -31,7 +31,8 @@ Oncoplot(
   showTumorSampleBarcodes = FALSE,
   fill = TRUE,
   showTitle = TRUE,
-  titleText = NULL
+  titleText = NULL,
+  vc_cols = NULL
 )
 }
 \arguments{
@@ -88,6 +89,8 @@ Oncoplot(
 \item{showTitle}{Default TRUE.}
 
 \item{titleText}{Custom title. Default 'NULL'.}
+
+\item{vc_cols}{named vector of colors for each Variant_Classification.}
 }
 \value{
 A waterfall plot
@@ -102,7 +105,12 @@ maf<-maftools::read.maf(mut_path ,isTCGA = FALSE)
 pathway_path <- system.file("extdata","kegg_323_gmt.Rdata",package = "ssMutPA")
 load(pathway_path)
 data(samp_class_onco,mut_onco,sur_onco)
+samples <- names(samp_class_onco)
+samp_class_onco <- paste0("class_",samp_class_onco)
+names(samp_class_onco) <- samples
+sur_onco$event <- ifelse(sur_onco$event\%in\%1,"Dead","Alive")
+col <- c("#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072", "#80B1D3")
 ##draw a waterfall plot
 #win.graph()
-\donttest{Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")}
+Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway",vc_cols=col)
 }

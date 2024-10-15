@@ -218,6 +218,7 @@ dotplot<-function(data,low_col="#6ADD26",high_col="#AB2513",cut_point=5){
 #' @param fill Logical. If TRUE draws genes and samples as blank grids even when they are not altered.
 #' @param showTitle Default TRUE.
 #' @param titleText Custom title. Default 'NULL'.
+#' @param vc_cols named vector of colors for each Variant_Classification.
 #' @importFrom maftools subsetMaf
 #' @importFrom maftools oncoplot
 #' @importFrom RColorBrewer brewer.pal
@@ -231,14 +232,20 @@ dotplot<-function(data,low_col="#6ADD26",high_col="#AB2513",cut_point=5){
 #' pathway_path <- system.file("extdata","kegg_323_gmt.Rdata",package = "ssMutPA")
 #' load(pathway_path)
 #' data(samp_class_onco,mut_onco,sur_onco)
+#' samples <- names(samp_class_onco)
+#' samp_class_onco <- paste0("class_",samp_class_onco)
+#' names(samp_class_onco) <- samples
+#' sur_onco$event <- ifelse(sur_onco$event%in%1,"Dead","Alive")
+#' col <- c("#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072", "#80B1D3")
 #' ##draw a waterfall plot
 #' #win.graph()
-#' \donttest{Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway")}
+#' Oncoplot(maf,samp_class_onco,sur_onco,mut_onco,kegg_323_gmt,"IL-17 signaling pathway",vc_cols=col)
 Oncoplot<-function(maf,samp_class,sur,mut_status,pathway,pathway_name,isTCGA=FALSE,top=20,clinicalFeatures = c("sample_group","event"),
                    class_col=c("#00468B","#ED0000"),event_col=c("#B3DE69","#BC80BD"),sortByAnnotation = TRUE,gene_mar=7,
                    removeNonMutated= FALSE,drawRowBar= TRUE,drawColBar= TRUE,leftBarData= NULL,leftBarLims= NULL,
                    rightBarData= NULL,rightBarLims= NULL,topBarData= NULL,logColBar= FALSE,draw_titv= FALSE,
-                   showTumorSampleBarcodes= FALSE,fill= TRUE,showTitle = TRUE,titleText = NULL){
+                   showTumorSampleBarcodes= FALSE,fill= TRUE,showTitle = TRUE,titleText = NULL,
+                   vc_cols = NULL){
 
   a<-apply(mut_status,1,function(x){length(which(x!=0))/length(x)})
   pathway_list<-split(pathway[,2],pathway[,1])
@@ -255,8 +262,6 @@ Oncoplot<-function(maf,samp_class,sur,mut_status,pathway,pathway_name,isTCGA=FAL
   rownames(all_sample)<-all_sample[,1]
   inter<-intersect(intersect(all_sample[,1],rownames(path_clust)),rownames(sur_event))
   clinical<-as.data.frame(cbind(all_sample[inter,],sample_group=path_clust[inter,2],event=sur_event[inter,2]))
-  clinical[,2]<-as.numeric(clinical[,2])
-  clinical[,3]<-as.numeric(clinical[,3])
   colnames(clinical)[1]<-"Tumor_Sample_Barcode"
   rownames(clinical)<-clinical[,1]
   loc<-match(maf@clinical.data$Tumor_Sample_Barcode,clinical$Tumor_Sample_Barcode)
@@ -270,7 +275,7 @@ Oncoplot<-function(maf,samp_class,sur,mut_status,pathway,pathway_name,isTCGA=FAL
   fabcolors<-list(sample_group=col,event=col_event)
   path_gene<-names(sort(path_mutrate[[pathway_name]],decreasing = T)[1:top])
   #win.graph(width = 400,height = 400)
-  vc_cols <- brewer.pal(length(levels(maf@data$Variant_Classification)),"Set3")
+  vc_cols <- vc_cols
   names(vc_cols) <- levels(maf@data$Variant_Classification)
   oncoplot(maf,genes=path_gene,clinicalFeatures = c("sample_group","event"),sortByAnnotation =sortByAnnotation,annotationColor = fabcolors,
            removeNonMutated = removeNonMutated,gene_mar=gene_mar,bgCol = "#F4F4F4",colors =vc_cols)
